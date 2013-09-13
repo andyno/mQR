@@ -20,9 +20,9 @@ $('#cameraInput').change(function(e) {
 });
 ```
 
-Use
+Use input tag
 ```HTML
-<input type="file" capture="camera" accept="image/*" id="cameraInput" style="width:200px;height:200px;opacity:0;cursor:pointer;">
+<input type="file" capture="camera" accept="image/*" id="cameraInput">
 ```
 to enable direct upload from camera on mobile device (iOS6 at least)
 
