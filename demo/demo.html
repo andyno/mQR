@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Demo!</title>
+</head>
+<body style="font-family:verdana;">
+	<h1 style="text-align:center;">TAP!</h1>
+	<div id="scan-button" style="width:200px;height:200px;background:url('img/camera.png') no-repeat;margin-left:auto;margin-right:auto;margin-top:3em;">
+		<form id="image-holder">
+			<input type="file" capture="camera" accept="image/*" id="cameraInput" style="width:200px;height:200px;opacity:0;cursor:pointer;">
+		</form>
+	</div>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/qr.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    		$('#cameraInput').change(function(e) {
+       			readQR(this, function(data) {
+       				alert(data);
+       			});
+    		});
+		});
+	</script>
+</body>
+</html>
